@@ -109,8 +109,8 @@ const Main = () => {
                 stepDuration={0.35}
                 style={{
                   fontFamily: "'Playfair Display', serif",
-                  fontWeight: 700,
-                  fontSize: "160px",
+                  fontWeight: 900,
+                  fontSize: "190px",
                   letterSpacing: "10px",
                   color: "#fff",
                   textTransform: "uppercase",
@@ -140,7 +140,7 @@ const Main = () => {
               {/* 💬 Subtext */}
               <div className="row justify-content-center">
                 <div className="col-md-8 mb-3">
-                  <p style={{ fontSize: "1.2rem", opacity: 0.9 }}>
+                  <p style={{ fontSize: "1.2rem", opacity: 0.9 , color: "#000000"}}>
                     Far far away, behind the word mountains, far from the
                     countries Vokalia and Consonantia, there live the blind
                     texts.
@@ -253,7 +253,7 @@ const Main = () => {
               fontSize: isMobile ? "16px" : "18px",
               lineHeight: "1.8",
               marginBottom: "35px",
-              color: "#eee",
+              color: "#352a2a",
             }}
           >
             Far far away, behind the word mountains, far from the countries
