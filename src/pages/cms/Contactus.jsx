@@ -61,7 +61,8 @@ const Contactus = () => {
         <div style={{ position: "relative", zIndex: 2 }}>
           <h1 style={{ fontSize: "3rem", marginBottom: "15px" }}>Contact Us</h1>
           <p style={{ fontSize: "1.2rem", marginBottom: "20px" }}>
-            Choose the perfect plan for your wellness journey
+        
+            {/* Choose the perfect plan for your wellness journey */}
           </p>
           <Link
             to="/"

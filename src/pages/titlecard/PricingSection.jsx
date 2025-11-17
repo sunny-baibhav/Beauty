@@ -139,7 +139,7 @@ const PricingSection = ({ showLayout = false }) => {
               Our Pricing Plans
             </h1>
             <p style={{ fontSize: "1.2rem", marginBottom: "20px" }}>
-              Choose the perfect plan for your wellness journey
+              {/* Choose the perfect plan for your wellness journey */}
             </p>
             {/* Back to Home button */}
             <Link

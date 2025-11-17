@@ -14,6 +14,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 const Main = () => {
   const isMobile = window.innerWidth <= 768;
   const sectionRef = useRef(null);
@@ -172,8 +173,8 @@ const Main = () => {
                   Get in Touch
                 </a>
 
-                <a
-                  href="#"
+                <Link
+                  to="/contact"
                   style={{
                     border: "2px solid #fff",
                     color: "#fff",
@@ -194,7 +195,7 @@ const Main = () => {
                   }}
                 >
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
           </div>

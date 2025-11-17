@@ -39,7 +39,7 @@ const Aboutus = () => {
           <div style={{ position: "relative", zIndex: 2 }}>
             <h1 style={{ fontSize: "3rem", marginBottom: "15px" }}>About Us</h1>
             <p style={{ fontSize: "1.2rem", marginBottom: "20px" }}>
-              Learn more about our mission, vision, and team.
+              {/* Learn more about our mission, vision, and team. */}
             </p>
             <Link
               to="/"
