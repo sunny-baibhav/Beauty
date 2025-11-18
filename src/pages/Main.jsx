@@ -65,7 +65,7 @@ const Main = () => {
         className="hero-wrap d-flex align-items-center justify-content-center text-center"
         style={{
           position: "relative",
-          height: "80vh",
+          height: "100vh",
           backgroundImage: 'url("/bg_1.jpg")',
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -210,25 +210,43 @@ const Main = () => {
 
       <section
         style={{
+          // position: "relative",
+          // width: "100%",
+          // backgroundImage: "url('/intro.jpg')",
+          // backgroundSize: "cover",
+          // backgroundPosition: "center",
+          // padding: isMobile ? "80px 20px" : "120px 0",
+          // color: "#fff",
+          // display: "flex",
+          // justifyContent: isMobile ? "center" : "flex-end",
+          // alignItems: "center",
+          // textAlign: isMobile ? "center" : "left",
+          // overflow: "hidden",
+          
           position: "relative",
-          width: "100%",
-          backgroundImage: "url('/intro.jpg')",
+          height: "80vh",
+            width: "100%",
+          backgroundImage: 'url("/intro.jpg")',
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundAttachment: "fixed",
           padding: isMobile ? "80px 20px" : "120px 0",
           color: "#fff",
-          display: "flex",
+          textAlign: isMobile ? "center" : "left",
+           display: "flex",
           justifyContent: isMobile ? "center" : "flex-end",
           alignItems: "center",
-          textAlign: isMobile ? "center" : "left",
-          overflow: "hidden",
         }}
       >
         {/* Dark overlay for readability */}
         <div
-          style={{
+            style={{
             position: "absolute",
-            inset: 0,
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            // backgroundColor: "rgba(0,0,0,0.6)",
             zIndex: 1,
           }}
         ></div>
