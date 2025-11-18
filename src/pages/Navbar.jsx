@@ -46,7 +46,7 @@ const Navbar = () => {
             gap: "6px",
           }}
         >
-          <FaBars style={{ fontSize: "22px", color: "#fff" }} />
+          <FaBars style={{ fontSize: "22px", color: "#000000ff" }} />
           <span>Menu</span>
         </button>
 
