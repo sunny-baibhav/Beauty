@@ -140,7 +140,13 @@ const Main = () => {
               {/* 💬 Subtext */}
               <div className="row justify-content-center">
                 <div className="col-md-8 mb-3">
-                  <p style={{ fontSize: "1.2rem", opacity: 0.9 , color: "#000000"}}>
+                  <p
+                    style={{
+                      fontSize: "1.2rem",
+                      opacity: 0.9,
+                      color: "#000000",
+                    }}
+                  >
                     Far far away, behind the word mountains, far from the
                     countries Vokalia and Consonantia, there live the blind
                     texts.
@@ -267,6 +273,8 @@ const Main = () => {
               listStyle: "none",
               padding: 0,
               margin: 0,
+              maxWidth: isMobile ? "90%" : "100%",
+              marginInline: "auto",
             }}
           >
             {[
@@ -280,19 +288,23 @@ const Main = () => {
                 key={i}
                 style={{
                   fontSize: isMobile ? "18px" : "20px",
-                  color: "#f7d774",
+                  color: "#000000",
                   marginBottom: "18px",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: isMobile ? "center" : "flex-start",
+
+                  // ⭐ FIXED: Mobile should left-align the content inside the list item
+                  justifyContent: "flex-start",
+
                   fontWeight: "500",
+                  textAlign: isMobile ? "left" : "left",
                 }}
               >
                 <span
                   style={{
                     width: "26px",
                     height: "26px",
-                    backgroundColor: "#f7d774",
+                    backgroundColor: "#fff",
                     borderRadius: "50%",
                     display: "inline-block",
                     marginRight: "12px",
