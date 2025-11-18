@@ -210,48 +210,29 @@ const Main = () => {
 
       <section
         style={{
-          // position: "relative",
-          // width: "100%",
-          // backgroundImage: "url('/intro.jpg')",
-          // backgroundSize: "cover",
-          // backgroundPosition: "center",
-          // padding: isMobile ? "80px 20px" : "120px 0",
-          // color: "#fff",
-          // display: "flex",
-          // justifyContent: isMobile ? "center" : "flex-end",
-          // alignItems: "center",
-          // textAlign: isMobile ? "center" : "left",
-          // overflow: "hidden",
-          
           position: "relative",
-          height: "80vh",
-            width: "100%",
-          backgroundImage: 'url("/intro.jpg")',
+          width: "100%",
+          minHeight: "80vh",
+
+          // ⭐ FIX: Overlay + Image combined so NO FLASH
+          backgroundImage:
+            "url('/intro.jpg')",
+
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundAttachment: "fixed",
+
+          // ❌ Don't use background-attachment fixed on mobile
+          backgroundAttachment: isMobile ? "fixed" : "fixed",
+
           padding: isMobile ? "80px 20px" : "120px 0",
           color: "#fff",
-          textAlign: isMobile ? "center" : "left",
-           display: "flex",
+          textAlign: "left",
+          display: "flex",
           justifyContent: isMobile ? "center" : "flex-end",
           alignItems: "center",
         }}
       >
-        {/* Dark overlay for readability */}
-        <div
-            style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            // backgroundColor: "rgba(0,0,0,0.6)",
-            zIndex: 1,
-          }}
-        ></div>
-
-        {/* Text content */}
+        {/* TEXT BOX */}
         <div
           style={{
             position: "relative",
@@ -269,21 +250,19 @@ const Main = () => {
               lineHeight: "1.2",
             }}
           >
-            Benefits of Doing Spa &amp; Massage
+            Benefits of Doing Spa & Massage
           </h2>
 
           <p
             style={{
-              fontSize: isMobile ? "16px" : "18px",
-              lineHeight: "1.8",
+              fontSize: isMobile ? "15px" : "18px",
+              lineHeight: "1.7",
               marginBottom: "35px",
-              color: "#352a2a",
+              color: "#000000ff", // ⭐ More readable on dark overlay
             }}
           >
             Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean.
+            Vokalia and Consonantia, there live the blind texts.
           </p>
 
           <ul
@@ -291,8 +270,7 @@ const Main = () => {
               listStyle: "none",
               padding: 0,
               margin: 0,
-              maxWidth: isMobile ? "90%" : "100%",
-              marginInline: "auto",
+              maxWidth: isMobile ? "100%" : "100%",
             }}
           >
             {[
@@ -305,17 +283,13 @@ const Main = () => {
               <li
                 key={i}
                 style={{
-                  fontSize: isMobile ? "18px" : "20px",
-                  color: "#000000",
+                  fontSize: isMobile ? "17px" : "20px",
+                  color: "#000000ff",
                   marginBottom: "18px",
                   display: "flex",
                   alignItems: "center",
-
-                  // ⭐ FIXED: Mobile should left-align the content inside the list item
                   justifyContent: "flex-start",
-
                   fontWeight: "500",
-                  textAlign: isMobile ? "left" : "left",
                 }}
               >
                 <span
