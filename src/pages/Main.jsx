@@ -8,13 +8,14 @@ import CounterSection from "./CounterSection";
 import BlogSection from "./BlogSection";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-
+import { motion } from "framer-motion";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import Landingview from "./Landingview";
 const Main = () => {
   const isMobile = window.innerWidth <= 768;
   const sectionRef = useRef(null);
@@ -61,168 +62,182 @@ const Main = () => {
   return (
     <>
       {/* <Navbar/> */}
-      <section
-        className="hero-wrap d-flex align-items-center justify-content-center text-center"
+     <section
+  className="hero-wrap d-flex align-items-center justify-content-center text-center"
+  style={{
+    position: "relative",
+    height: "100vh",
+    backgroundImage: 'url("/bg_1.jpg")',
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundAttachment: "fixed",
+    padding: "100px 0",
+    color: "#fff",
+  }}
+>
+  {/* Dark Overlay */}
+  <div
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      // backgroundColor: "rgba(0,0,0,0.6)",
+      zIndex: 1,
+    }}
+  />
+
+  {/* Content */}
+  <div
+    className="container"
+    style={{
+      position: "relative",
+      zIndex: 2,
+      maxWidth: "1100px",
+      padding: "0 20px",
+    }}
+  >
+    {/* 🔥 Big Animated Heading */}
+    <motion.h1
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      style={{
+        fontFamily: "'Playfair Display', serif",
+        fontWeight: 900,
+        fontSize: "80px",
+        letterSpacing: "10px",
+        textTransform: "uppercase",
+        textAlign: "center",
+        lineHeight: "1.1",
+        width: "100%",
+        marginBottom: "40px",
+        background:
+          "linear-gradient(90deg, #ff00cc, #ff8800, #ffee00, #00c9ff)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        transform: "scale(1.25)",
+        transformOrigin: "center",
+        textShadow: "6px 6px 15px rgba(0,0,0,0.4)",
+      }}
+    >
+      Elan Beauty & Spa
+    </motion.h1>
+
+    {/* ✨ New Small Text + Buttons Section */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.3 }}
+      style={{
+        maxWidth: "700px",
+        margin: "0 auto",
+        textAlign: "center",
+      }}
+    >
+      <div
         style={{
-          position: "relative",
-          height: "100vh",
-          backgroundImage: 'url("/bg_1.jpg")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-          padding: "100px 0",
-          color: "#fff",
+          width: "120px",
+          height: "2px",
+          backgroundColor: "#f4c542",
+          margin: "0 auto 20px auto",
+        }}
+      />
+
+      <p
+        style={{
+          fontSize: "18px",
+          color: "#000000ff",
+          opacity: 0.9,
+          lineHeight: "1.6",
+          marginBottom: "35px",
         }}
       >
-        {/* 🌑 Dark Overlay */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            // backgroundColor: "rgba(0,0,0,0.6)",
-            zIndex: 1,
-          }}
-        />
+        Far far away, behind the word mountains, far from the countries
+        Vokalia and Consonantia, there live the blind texts.
+      </p>
 
-        {/* ✨ Content */}
-        <div
-          className="container"
-          style={{
-            position: "relative",
-            zIndex: 2,
-            maxWidth: "1100px",
-            padding: "0 20px",
-          }}
-        >
-          <div className="row justify-content-center">
-            <div className="col-md-10">
-              {/* 🔮 Heading */}
-              <BlurText
-                text="Elan beauty & Spa"
-                className="text-center mb-4"
-                delay={150}
-                animateBy="words"
-                direction="top"
-                stepDuration={0.35}
-                style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontWeight: 900,
-                  fontSize: "190px",
-                  letterSpacing: "10px",
-                  color: "#fff",
-                  textTransform: "uppercase",
-                  lineHeight: "1.1",
-                  textShadow: "6px 6px 15px rgba(0,0,0,0.7)",
+      {/* BUTTONS */}
+     <div
+  style={{
+    display: "flex",
+    gap: "20px",
+    justifyContent: "center",
+    flexWrap: "wrap",
+  }}
+>
+  {/* Get in Touch */}
+  <button
+    style={{
+      backgroundColor: "#ff4fa3",
+      border: "none",
+      padding: "12px 35px",
+      borderRadius: "30px",
+      fontSize: "18px",
+      color: "#fff",
+      cursor: "pointer",
+      transition: "all 0.3s ease",
+    }}
+    onMouseEnter={(e) => {
+      e.target.style.transform = "scale(1.1)";
+      e.target.style.backgroundColor = "#ff1e90"; // darker pink on hover
+      e.target.style.boxShadow = "0 0 20px rgba(255,79,163,0.9)";
+    }}
+    onMouseLeave={(e) => {
+      e.target.style.transform = "scale(1)";
+      e.target.style.backgroundColor = "#ff4fa3";
+      e.target.style.boxShadow = "none";
+    }}
+  >
+    Get in Touch
+  </button>
 
-                  /* 🔥 Fixes for proper BIG size */
-                  display: "block",
-                  width: "100%",
-                  whiteSpace: "nowrap",
-                  textAlign: "center",
-                  transform: "scale(1.25)", // increase this to make it even bigger
-                  transformOrigin: "center",
-                }}
-              />
+  {/* Contact Button */}
+  <button
+    style={{
+      backgroundColor: "transparent",
+      border: "2px solid #fff",
+      padding: "12px 35px",
+      borderRadius: "30px",
+      fontSize: "18px",
+      color: "#fff",
+      cursor: "pointer",
+      transition: "all 0.3s ease",
+    }}
+    onMouseEnter={(e) => {
+      e.target.style.transform = "scale(1.1)";
+      e.target.style.backgroundColor = "#ff4fa3"; // pink fill on hover
+      e.target.style.color = "#fff";
+      e.target.style.border = "2px solid #ff4fa3";
+      e.target.style.boxShadow = "0 0 20px rgba(255,79,163,0.8)";
+    }}
+    onMouseLeave={(e) => {
+      e.target.style.transform = "scale(1)";
+      e.target.style.backgroundColor = "transparent";
+      e.target.style.color = "#fff";
+      e.target.style.border = "2px solid #fff";
+      e.target.style.boxShadow = "none";
+    }}
+  >
+    Contact
+  </button>
+</div>
+    </motion.div>
+  </div>
+</section>
 
-              {/* ✨ Gold Divider */}
-              <div
-                style={{
-                  width: "60%",
-                  height: "2px",
-                  backgroundColor: "#c9a53d",
-                  margin: "20px auto 40px",
-                }}
-              />
-
-              {/* 💬 Subtext */}
-              <div className="row justify-content-center">
-                <div className="col-md-8 mb-3">
-                  <p
-                    style={{
-                      fontSize: "1.2rem",
-                      opacity: 0.9,
-                      color: "#000000",
-                    }}
-                  >
-                    Far far away, behind the word mountains, far from the
-                    countries Vokalia and Consonantia, there live the blind
-                    texts.
-                  </p>
-                </div>
-              </div>
-
-              {/* 🎀 Buttons */}
-              <div className="mt-4">
-                <a
-                  href="#"
-                  style={{
-                    backgroundColor: "#ff69b4",
-                    color: "#fff",
-                    padding: "14px 40px",
-                    borderRadius: "50px",
-                    fontWeight: 600,
-                    margin: "0 10px",
-                    transition: "0.3s",
-                    display: "inline-block",
-                    border: "none",
-                  }}
-                  onMouseOver={(e) =>
-                    (e.target.style.backgroundColor = "#ff85c1")
-                  }
-                  onMouseOut={(e) =>
-                    (e.target.style.backgroundColor = "#ff69b4")
-                  }
-                >
-                  Get in Touch
-                </a>
-
-                <Link
-                  to="/contact"
-                  style={{
-                    border: "2px solid #fff",
-                    color: "#fff",
-                    padding: "14px 40px",
-                    borderRadius: "50px",
-                    fontWeight: 600,
-                    margin: "0 10px",
-                    transition: "0.3s",
-                    display: "inline-block",
-                  }}
-                  onMouseOver={(e) => {
-                    e.target.style.backgroundColor = "#fff";
-                    e.target.style.color = "#ff69b4";
-                  }}
-                  onMouseOut={(e) => {
-                    e.target.style.backgroundColor = "transparent";
-                    e.target.style.color = "#fff";
-                  }}
-                >
-                  Contact
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section
         style={{
           position: "relative",
           width: "100%",
-          minHeight: "80vh",
+          minHeight: "88vh",
 
-          // ⭐ FIX: Overlay + Image combined so NO FLASH
-          backgroundImage:
-            "url('/intro.jpg')",
-
+          backgroundImage: "url('/intro.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-
-          // ❌ Don't use background-attachment fixed on mobile
-          backgroundAttachment: isMobile ? "fixed" : "fixed",
+          backgroundAttachment: "fixed", // ⭐ FIX
 
           padding: isMobile ? "80px 20px" : "120px 0",
           color: "#fff",
@@ -232,6 +247,17 @@ const Main = () => {
           alignItems: "center",
         }}
       >
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            // backgroundColor: "rgba(0, 0, 0, 0.15)", // Increase/decrease for darkness
+            zIndex: 1,
+          }}
+        />
         {/* TEXT BOX */}
         <div
           style={{
@@ -325,6 +351,7 @@ const Main = () => {
         </div>
       </section>
 
+      <Landingview />
       <section className="ftco-section ftco-no-pt ftco-no-pb">
         <div className="container">
           <div className="row no-gutters">

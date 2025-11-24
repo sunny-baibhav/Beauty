@@ -11,6 +11,7 @@ import BlogSection from './pages/BlogSection'
 import Contactus from './pages/cms/Contactus'
 import GoToTopButton from './pages/GoToTopButton'
 import ScrollToTop from './pages/ScrollToTop'
+import LandingPage from './pages/LandingPage'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
       <Route path="/specialists" element={<Special />}/>
       <Route path="/blog" element={<BlogSection  showLayout={true} />}/>
       <Route path='/contact' element={<Contactus/>}/>
+      <Route path='/landing-page' element={<LandingPage/>}/>
       <Route path="/pricing" element={<PricingSection showLayout={true}/>}>
       </Route>
      </Routes>

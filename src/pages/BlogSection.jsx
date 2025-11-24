@@ -75,7 +75,7 @@ const BlogSection = ({ showLayout = false }) => {
   const startIndex = (currentPage - 1) * postsPerPage;
   const visiblePosts = showLayout
     ? allPosts.slice(startIndex, startIndex + postsPerPage)
-    : allPosts.slice(0, 3); // only top 3 on homepage
+    : allPosts.slice(0, 3); // only top `3` on homepage
 
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },

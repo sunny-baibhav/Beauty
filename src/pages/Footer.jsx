@@ -7,12 +7,13 @@ const Footer = () => {
    <footer
   className="ftco-footer ftco-section"
   style={{
-    backgroundImage: 'url("/bg-footer-new.webp")', // 👉 your footer background image
+    // backgroundImage: 'url("/bg-footer-new.webp")', // 👉 your footer background image
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     position: "relative",
     color: "#fff",
+    backgroundColor:"#dac7b4"
   }}
 >
   {/* 🖤 Overlay for readability */}
