@@ -417,6 +417,999 @@ const LandingPage = () => {
           </motion.div>
         </div>
       </section>
+<section
+  style={{
+    width: "100%",
+    minHeight: "100vh",
+    backgroundColor: "#fdf8ee",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "80px 30px",
+  }}
+>
+  <div
+    className="spa-wrapper"
+    style={{
+      width: "100%",
+      maxWidth: "1300px",
+      display: "flex",
+      alignItems: "flex-start",
+      justifyContent: "space-between",
+      gap: "40px",
+      flexDirection: "row",
+      flexWrap: "wrap",
+    }}
+  >
+    {/* LEFT — MANICURE CONTENT */}
+    <motion.div
+      className="spa-left"
+      initial={{ opacity: 0, x: -60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      style={{
+        flex: 1,
+        textAlign: "left",
+        maxWidth: "620px",
+      }}
+    >
+      <h1
+        className="spa-title"
+        style={{
+          fontSize: "52px",
+          color: "#482A1E",
+          fontWeight: "700",
+          marginBottom: "30px",
+          fontFamily: "cursive",
+          textAlign: "left",
+        }}
+      >
+        Manicure
+      </h1>
+
+      {/* CLASSIC MANICURE */}
+      <div
+        style={{
+          border: "2px solid #eac59a",
+          padding: "25px",
+          borderRadius: "10px",
+          marginBottom: "40px",
+          backgroundColor: "#fffaf3",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "26px",
+            color: "#482A1E",
+            fontWeight: "700",
+            marginBottom: "10px",
+          }}
+        >
+          E'LAN CLASSIC MANICURE
+        </h2>
+
+        <p
+          style={{
+            color: "#6f4e37",
+            fontSize: "16px",
+            marginBottom: "10px",
+          }}
+        >
+          <strong>Duration:</strong> 25–30 mins
+          <span style={{ float: "right" }}>
+            <strong>Price:</strong> $45
+          </span>
+        </p>
+
+        <ul
+          style={{
+            color: "#6f4e37",
+            marginTop: "10px",
+            lineHeight: "1.8",
+          }}
+        >
+          <li>Softener soak to nourish your skin</li>
+          <li>Expert cuticle removal for a clean finish</li>
+          <li>Precise buffing, shaping and cuticle oil application</li>
+          <li>Relaxation massage to soothe tired hands</li>
+          <li>Hydrating softener cream</li>
+          <li>Polish included for a flawless finish</li>
+        </ul>
+      </div>
+
+      {/* PREMIUM MANICURE */}
+      <div
+        style={{
+          border: "2px solid #eac59a",
+          padding: "25px",
+          borderRadius: "10px",
+          backgroundColor: "#fffaf3",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "26px",
+            color: "#482A1E",
+            fontWeight: "700",
+            marginBottom: "10px",
+          }}
+        >
+          E'LAN PREMIUM MANICURE
+        </h2>
+
+        <p
+          style={{
+            color: "#6f4e37",
+            fontSize: "16px",
+            marginBottom: "10px",
+          }}
+        >
+          <strong>Duration:</strong> 45–50 mins
+          <span style={{ float: "right" }}>
+            <strong>Price:</strong> $65
+          </span>
+        </p>
+
+        <ul
+          style={{
+            color: "#6f4e37",
+            marginTop: "10px",
+            lineHeight: "1.8",
+          }}
+        >
+          <li>Fruit & flowers soak to soothe and refresh</li>
+          <li>Expert cuticle removal and meticulous shaping</li>
+          <li>Buffing, shaping and cuticle oil application</li>
+          <li>Exfoliating hand mask for rejuvenated skin</li>
+          <li>Nourishing C moisturizer</li>
+          <li>Polish included for a perfect finish</li>
+          <li>Hand mask for deep hydration</li>
+          <li>Relaxation massage with candle oil</li>
+        </ul>
+      </div>
+    </motion.div>
+
+    {/* RIGHT — IMAGE GRID */}
+    <motion.div
+      className="spa-right"
+      initial={{ opacity: 0, x: 60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      style={{
+        flex: 1,
+        maxWidth: "500px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "20px",
+      }}
+    >
+      {/* BIG IMAGE */}
+      <img
+        className="big-img"
+        src="/istockphoto-1308841863-612x612.jpg"
+        alt="Main Image"
+        style={{
+          width: "100%",
+          height: "500px",
+          objectFit: "cover",
+          borderRadius: "20px",
+        }}
+      />
+
+      {/* GRID IMAGES */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gap: "15px",
+        }}
+      >
+        <img
+          className="small-img"
+          src="/CAI_1170_original.jpg"
+          alt="small-1"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+        <img
+          className="small-img"
+          src="/capri-pedi-spa-luxury-pedicure-chair.png"
+          alt="small-2"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+        <img
+          className="small-img"
+          src="/istockphoto-1308841863-612x612.jpg"
+          alt="small-3"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+        <img
+          className="small-img"
+          src="/CAI_1170_original.jpg"
+          alt="small-4"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+      </div>
+    </motion.div>
+  </div>
+</section>
+
+<section
+  style={{
+    width: "100%",
+    minHeight: "100vh",
+    backgroundColor: "#fdf8ee",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "80px 30px",
+  }}
+>
+  <div
+    className="spa-wrapper"
+    style={{
+      width: "100%",
+      maxWidth: "1300px",
+      display: "flex",
+      alignItems: "flex-start",
+      justifyContent: "space-between",
+      gap: "40px",
+      flexDirection: "row",
+      flexWrap: "wrap",
+    }}
+  >
+    {/* LEFT — IMAGE GRID */}
+    <motion.div
+      className="spa-left"
+      initial={{ opacity: 0, x: -60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      style={{
+        flex: 1,
+        maxWidth: "500px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "20px",
+      }}
+    >
+      {/* BIG IMAGE */}
+      <img
+        className="big-img"
+        src="/istockphoto-1308841863-612x612.jpg"
+        alt="Main Spa Image"
+        style={{
+          width: "100%",
+          height: "500px",
+          objectFit: "cover",
+          borderRadius: "20px",
+        }}
+      />
+
+      {/* SMALL IMAGES GRID */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gap: "15px",
+        }}
+      >
+        <img
+          className="small-img"
+          src="/CAI_1170_original.jpg"
+          alt="small-1"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+        <img
+          className="small-img"
+          src="/capri-pedi-spa-luxury-pedicure-chair.png"
+          alt="small-2"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+        <img
+          className="small-img"
+          src="/istockphoto-1308841863-612x612.jpg"
+          alt="small-3"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+        <img
+          className="small-img"
+          src="/CAI_1170_original.jpg"
+          alt="small-4"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+      </div>
+    </motion.div>
+
+    {/* RIGHT — CONTENT (ACRYLIC EXTENSIONS NAILS) */}
+    <motion.div
+      className="spa-right"
+      initial={{ opacity: 0, x: 60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      style={{
+        flex: 1,
+        textAlign: "left",
+        maxWidth: "620px",
+      }}
+    >
+      <h1
+        style={{
+          fontSize: "52px",
+          color: "#482A1E",
+          fontWeight: "700",
+          marginBottom: "30px",
+          fontFamily: "cursive",
+        }}
+      >
+        Acrylic Extensions Nails
+      </h1>
+
+      {/* FULL SET ACRYLIC EXTENSIONS */}
+      <div
+        style={{
+          border: "2px solid #eac59a",
+          padding: "25px",
+          borderRadius: "10px",
+          marginBottom: "40px",
+          backgroundColor: "#fffaf3",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "26px",
+            color: "#482A1E",
+            fontWeight: "700",
+            marginBottom: "10px",
+            textTransform: "uppercase",
+          }}
+        >
+          Full Set Acrylic Extensions with Polish
+        </h2>
+
+        <p
+          style={{
+            color: "#6f4e37",
+            fontSize: "16px",
+            marginBottom: "10px",
+          }}
+        >
+          <span style={{ float: "right" }}>
+            <strong>Price:</strong> $60
+          </span>
+        </p>
+
+        <ul
+          style={{
+            color: "#6f4e37",
+            marginTop: "10px",
+            lineHeight: "1.8",
+          }}
+        >
+          <li>Customized acrylic extension application</li>
+          <li>Expert shaping and length customization</li>
+          <li>Choice of polish colour</li>
+        </ul>
+      </div>
+
+      {/* OVERLAY ON NATURAL NAILS */}
+      <div
+        style={{
+          border: "2px solid #eac59a",
+          padding: "25px",
+          borderRadius: "10px",
+          marginBottom: "40px",
+          backgroundColor: "#fffaf3",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "26px",
+            color: "#482A1E",
+            fontWeight: "700",
+            marginBottom: "10px",
+            textTransform: "uppercase",
+          }}
+        >
+          Overlay on Natural Nails with Polish
+        </h2>
+
+        <p
+          style={{
+            color: "#6f4e37",
+            fontSize: "16px",
+            marginBottom: "10px",
+          }}
+        >
+          <span style={{ float: "right" }}>
+            <strong>Price:</strong> $55
+          </span>
+        </p>
+
+        <ul
+          style={{
+            color: "#6f4e37",
+            marginTop: "10px",
+            lineHeight: "1.8",
+          }}
+        >
+          <li>Overlay application on natural nails</li>
+          <li>Expert shaping and polishing</li>
+        </ul>
+      </div>
+
+      {/* REFILL */}
+      <div
+        style={{
+          border: "2px solid #eac59a",
+          padding: "25px",
+          borderRadius: "10px",
+          backgroundColor: "#fffaf3",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "26px",
+            color: "#482A1E",
+            fontWeight: "700",
+            marginBottom: "10px",
+            textTransform: "uppercase",
+          }}
+        >
+          Refill
+        </h2>
+
+        <p
+          style={{
+            color: "#6f4e37",
+            fontSize: "16px",
+            marginBottom: "10px",
+          }}
+        >
+          <span style={{ float: "right" }}>
+            <strong>Price:</strong> $45
+          </span>
+        </p>
+
+        <ul
+          style={{
+            color: "#6f4e37",
+            marginTop: "10px",
+            lineHeight: "1.8",
+          }}
+        >
+          <li>Re-balancing of acrylic overlay</li>
+          <li>Shaping and polishing</li>
+        </ul>
+
+        <p style={{ marginTop: "10px", color: "#6f4e37", fontSize: "14px" }}>
+          *Prices are inclusive of all taxes.
+        </p>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
+<section
+  style={{
+    width: "100%",
+    minHeight: "100vh",
+    backgroundColor: "#fdf8ee",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "80px 30px",
+  }}
+>
+  <div
+    className="spa-wrapper"
+    style={{
+      width: "100%",
+      maxWidth: "1300px",
+      display: "flex",
+      alignItems: "flex-start",
+      justifyContent: "space-between",
+      gap: "40px",
+      flexDirection: "row",
+      flexWrap: "wrap",
+    }}
+  >
+    {/* LEFT — GEL BUILDER CONTENT */}
+    <motion.div
+      className="spa-left"
+      initial={{ opacity: 0, x: -60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      style={{
+        flex: 1,
+        maxWidth: "600px",
+        textAlign: "left",
+      }}
+    >
+      <h1
+        style={{
+          fontSize: "52px",
+          color: "#482A1E",
+          fontWeight: "700",
+          marginBottom: "30px",
+          fontFamily: "cursive",
+        }}
+      >
+        Gel Builder Nails
+      </h1>
+
+      {/* GEL BUILDER EXTENSION WITH POLISH */}
+      <div
+        style={{
+          border: "2px solid #eac59a",
+          padding: "25px",
+          borderRadius: "10px",
+          marginBottom: "35px",
+          backgroundColor: "#fffaf3",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "26px",
+            color: "#8B0000",
+            fontWeight: "700",
+            marginBottom: "10px",
+            textTransform: "uppercase",
+          }}
+        >
+          Gel Builder Extension With Polish
+        </h2>
+
+        <p style={{ fontSize: "16px", color: "#6f4e37" }}>
+          <span style={{ float: "right" }}>
+            <strong>Price:</strong> $70
+          </span>
+        </p>
+
+        <p style={{ marginTop: "10px", color: "#6f4e37" }}>
+          Get beautiful gel builder extensions with a polish finish:
+        </p>
+
+        <ul style={{ color: "#6f4e37", marginTop: "10px", lineHeight: "1.8" }}>
+          <li>Customized gel builder extension application</li>
+          <li>Expert shaping and length customization</li>
+          <li>Choice of polish color</li>
+        </ul>
+      </div>
+
+      {/* OVERLAY ON NATURAL NAILS */}
+      <div
+        style={{
+          border: "2px solid #eac59a",
+          padding: "25px",
+          borderRadius: "10px",
+          marginBottom: "35px",
+          backgroundColor: "#fffaf3",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "26px",
+            color: "#8B0000",
+            fontWeight: "700",
+            marginBottom: "10px",
+            textTransform: "uppercase",
+          }}
+        >
+          Overlay on Natural Nails With Polish
+        </h2>
+
+        <p style={{ fontSize: "16px", color: "#6f4e37" }}>
+          <span style={{ float: "right" }}>
+            <strong>Price:</strong> $65
+          </span>
+        </p>
+
+        <p style={{ marginTop: "10px", color: "#6f4e37" }}>
+          Enhance the natural beauty of your nails with acrylic overlay:
+        </p>
+
+        <ul style={{ color: "#6f4e37", marginTop: "10px", lineHeight: "1.8" }}>
+          <li>Overlay application on natural nails</li>
+          <li>Expert shaping and polishing</li>
+        </ul>
+      </div>
+
+      {/* REFILL */}
+      <div
+        style={{
+          border: "2px solid #eac59a",
+          padding: "25px",
+          borderRadius: "10px",
+          backgroundColor: "#fffaf3",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "26px",
+            color: "#8B0000",
+            fontWeight: "700",
+            marginBottom: "10px",
+            textTransform: "uppercase",
+          }}
+        >
+          Refill
+        </h2>
+
+        <p style={{ fontSize: "16px", color: "#6f4e37" }}>
+          <span style={{ float: "right" }}>
+            <strong>Price:</strong> $55
+          </span>
+        </p>
+
+        <p style={{ marginTop: "10px", color: "#6f4e37" }}>
+          Maintain your gel builder nails:
+        </p>
+
+        <ul style={{ color: "#6f4e37", marginTop: "10px", lineHeight: "1.8" }}>
+          <li>Re-balancing of gel builder overlay</li>
+          <li>Shaping and polishing</li>
+        </ul>
+      </div>
+    </motion.div>
+
+    {/* RIGHT — IMAGE GRID */}
+    <motion.div
+      className="spa-right"
+      initial={{ opacity: 0, x: 60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      style={{
+        flex: 1,
+        maxWidth: "500px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "20px",
+      }}
+    >
+      {/* BIG IMAGE */}
+      <img
+        src="/istockphoto-1308841863-612x612.jpg"
+        alt="Main Spa"
+        style={{
+          width: "100%",
+          height: "500px",
+          objectFit: "cover",
+          borderRadius: "20px",
+        }}
+      />
+
+      {/* SMALL GRID */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gap: "15px",
+        }}
+      >
+        <img
+          src="/CAI_1170_original.jpg"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+
+        <img
+          src="/capri-pedi-spa-luxury-pedicure-chair.png"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+
+        <img
+          src="/istockphoto-1308841863-612x612.jpg"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+
+        <img
+          src="/CAI_1170_original.jpg"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+      </div>
+    </motion.div>
+  </div>
+</section>
+
+
+<section
+  style={{
+    width: "100%",
+    minHeight: "100vh",
+    backgroundColor: "#fdf8ee",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "80px 30px",
+  }}
+>
+  <div
+    className="spa-wrapper"
+    style={{
+      width: "100%",
+      maxWidth: "1300px",
+      display: "flex",
+      alignItems: "flex-start",
+      justifyContent: "space-between",
+      gap: "40px",
+      flexDirection: "row",
+      flexWrap: "wrap",
+    }}
+  >
+    {/* LEFT — IMAGE GRID */}
+    <motion.div
+      className="spa-left"
+      initial={{ opacity: 0, x: -60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      style={{
+        flex: 1,
+        maxWidth: "500px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "20px",
+      }}
+    >
+      <img
+        src="/istockphoto-1308841863-612x612.jpg"
+        alt="Main Spa"
+        style={{
+          width: "100%",
+          height: "500px",
+          objectFit: "cover",
+          borderRadius: "20px",
+        }}
+      />
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gap: "15px",
+        }}
+      >
+        <img
+          src="/CAI_1170_original.jpg"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+
+        <img
+          src="/capri-pedi-spa-luxury-pedicure-chair.png"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+
+        <img
+          src="/istockphoto-1308841863-612x612.jpg"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+
+        <img
+          src="/CAI_1170_original.jpg"
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "15px",
+          }}
+        />
+      </div>
+    </motion.div>
+
+    {/* ============================
+        RIGHT — SNS POWDER CONTENT
+    =============================*/}
+    <motion.div
+      className="spa-right"
+      initial={{ opacity: 0, x: 60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      style={{
+        flex: 1,
+        maxWidth: "600px",
+        textAlign: "left",
+      }}
+    >
+      <h1
+        style={{
+          fontSize: "52px",
+          color: "#482A1E",
+          fontWeight: "700",
+          marginBottom: "30px",
+          fontFamily: "cursive",
+          textAlign: "center",
+        }}
+      >
+        SNS Powder
+      </h1>
+
+      {/* FULL SET EXTENSION */}
+      <div
+        style={{
+          border: "2px solid #eac59a",
+          padding: "25px",
+          borderRadius: "10px",
+          marginBottom: "35px",
+          backgroundColor: "#fffaf3",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "26px",
+            color: "#8B0000",
+            fontWeight: "700",
+            textTransform: "uppercase",
+            marginBottom: "10px",
+            textAlign: "center",
+          }}
+        >
+          Full Set Extension
+        </h2>
+
+        <p style={{ float: "right", color: "#482A1E" }}>
+          <strong>Price:</strong> $75
+        </p>
+
+        <p style={{ marginTop: "30px", color: "#6f4e37" }}>
+          Achieve flawless nails with our full set of SNS powder extensions.
+        </p>
+      </div>
+
+      {/* OVERLAY */}
+      <div
+        style={{
+          border: "2px solid #eac59a",
+          padding: "25px",
+          borderRadius: "10px",
+          marginBottom: "35px",
+          backgroundColor: "#fffaf3",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "26px",
+            color: "#8B0000",
+            fontWeight: "700",
+            textTransform: "uppercase",
+            marginBottom: "10px",
+            textAlign: "center",
+          }}
+        >
+          Overlay on Natural Nails with Polish
+        </h2>
+
+        <p style={{ float: "right", color: "#482A1E" }}>
+          <strong>Price:</strong> $70
+        </p>
+
+        <p style={{ marginTop: "30px", color: "#6f4e37" }}>
+          Enhance the natural beauty of your nails with an acrylic overlay,
+          including polish.
+        </p>
+      </div>
+
+      {/* ADDITIONAL SERVICES */}
+      <div
+        style={{
+          border: "2px solid #eac59a",
+          padding: "25px",
+          borderRadius: "10px",
+          backgroundColor: "#fffaf3",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "26px",
+            color: "#8B0000",
+            fontWeight: "700",
+            textTransform: "uppercase",
+            marginBottom: "20px",
+            textAlign: "center",
+          }}
+        >
+          Additional Services
+        </h2>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "20px",
+            color: "#6f4e37",
+          }}
+        >
+          <div>
+            <p>SHELLAC / GEL POLISH — $15</p>
+            <p>French Tip — $15</p>
+            <p>Designer Nail (Each) — $5</p>
+            <p>Soak Off SNS — $25</p>
+          </div>
+
+          <div>
+            <p>1–2 Nail Fix — $5</p>
+            <p>3–4 Nail Fix — $10</p>
+            <p>XL Length — $5</p>
+            <p>XXL Length — $10</p>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
+
 
       {/* ================= 4 SIDE LOWER SECTIONS ================= */}
       {/* <section

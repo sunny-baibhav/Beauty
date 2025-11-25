@@ -89,8 +89,13 @@ const Landingview = () => {
         {/* HEADING */}
         <h1
           className="hero-title"
-          style={{ display: "flex", gap: "12px", flexWrap: "wrap",  alignContent: "center",
-  flexDirection: "column", }}
+          style={{
+            display: "flex",
+            gap: "12px",
+            flexWrap: "wrap",
+            alignContent: "center",
+            flexDirection: "column",
+          }}
         >
           We Have
           <span className="highlight-anim">
