@@ -37,7 +37,7 @@ const allPosts = [
   },
   {
     id: 4,
-    image: "/image_4.jpg",
+    image: "/gallery-2.jpg",
     day: "25",
     month: "September",
     year: "2019",
@@ -57,7 +57,7 @@ const allPosts = [
   },
   {
     id: 6,
-    image: "/image_6.jpg",
+    image: "/gallery-1.jpg",
     day: "25",
     month: "September",
     year: "2019",

@@ -88,6 +88,11 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
+            <li className={isActive("/head-spa")}>
+              <Link to="/head-spa" className="nav-link">
+                Head Spa
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

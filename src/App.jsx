@@ -12,6 +12,7 @@ import Contactus from './pages/cms/Contactus'
 import GoToTopButton from './pages/GoToTopButton'
 import ScrollToTop from './pages/ScrollToTop'
 import LandingPage from './pages/LandingPage'
+import Head from './pages/Head'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
       <Route path="/blog" element={<BlogSection  showLayout={true} />}/>
       <Route path='/contact' element={<Contactus/>}/>
       <Route path='/landing-page' element={<LandingPage/>}/>
+      <Route path="/head-spa" element={<Head showLayout={true}/>}/>
       <Route path="/pricing" element={<PricingSection showLayout={true}/>}>
       </Route>
      </Routes>

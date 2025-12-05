@@ -7,7 +7,8 @@ import BgImage from "../BgImage";
 const Aboutus = () => {
   return (
     <>
-
+    
+       
       <Navbar />
       <div className="main-content" style={{ margin: 0, padding: 0 }}>
         <section
