@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import BgImage from "./BgImage";
 const Special = () => {
   const specialists = [
     {
@@ -54,7 +55,7 @@ const Special = () => {
         style={{
           position: "relative",
           height: "60vh",
-          backgroundImage: 'url("/bg_3.jpg")',
+          ...BgImage,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import { Link } from "react-router-dom";
+import BgImage from "../BgImage";
 
 const Contactus = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +37,7 @@ const Contactus = () => {
          style={{
             position: "relative",
             height: "60vh",
-            backgroundImage: 'url("/bg_3.jpg")',
+            ...BgImage,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",

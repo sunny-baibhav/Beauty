@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
+import BgImage from "../BgImage";
 const PricingSection = ({ showLayout = false }) => {
   const plans = [
     {
@@ -114,7 +115,7 @@ const PricingSection = ({ showLayout = false }) => {
           style={{
             position: "relative",
             height: "60vh",
-            backgroundImage: 'url("/bg_3.jpg")',
+           ...BgImage,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",

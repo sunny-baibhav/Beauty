@@ -5,6 +5,7 @@ import "@mui/icons-material";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
+import BgImage from "../BgImage";
 const ServicesSection1 = ({ showLayout = false }) => {
   const [openAccordion, setOpenAccordion] = useState("one");
 
@@ -109,7 +110,7 @@ const ServicesSection1 = ({ showLayout = false }) => {
           style={{
             position: "relative",
             height: "60vh",
-            backgroundImage: 'url("/bg_3.jpg")',
+            ...BgImage,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
@@ -200,77 +201,87 @@ const ServicesSection1 = ({ showLayout = false }) => {
                   <div className="card-header bg-light">
                     <button
                       className="d-flex align-items-center justify-content-between btn btn-link w-100 text-dark text-left"
-                      onClick={() => toggleAccordion("one")}
+                      onClick={() => toggleAccordion("regular")}
                     >
-                      Spa Therapies
+                      E'LAN REGULAR PEDICURE
                       <i
                         className={`fa ${
-                          openAccordion === "one" ? "fa-minus" : "fa-plus"
+                          openAccordion === "regular" ? "fa-minus" : "fa-plus"
                         }`}
                         aria-hidden="true"
                       />
                     </button>
                   </div>
-                  {openAccordion === "one" && (
+
+                  {openAccordion === "regular" && (
                     <div className="card-body text-left">
+                      <p className="mb-2">
+                        <strong>Duration:</strong> 30–35 mins
+                      </p>
+
                       <ul className="list-unstyled">
-                        <li className="d-flex justify-content-between border-bottom py-2">
-                          <span>Face Treatments</span>
-                          <span>40 min — $10</span>
+                        <li className="border-bottom py-2">
+                          Sea salt relaxation
                         </li>
-                        <li className="d-flex justify-content-between border-bottom py-2">
-                          <span>Nail Treatments</span>
-                          <span>30 min — $20</span>
+                        <li className="border-bottom py-2">Cuticle removal</li>
+                        <li className="border-bottom py-2">
+                          Buffing & shaping
                         </li>
-                        <li className="d-flex justify-content-between border-bottom py-2">
-                          <span>Medical Treatments</span>
-                          <span>60 min — $10</span>
+                        <li className="border-bottom py-2">Callus removal</li>
+                        <li className="border-bottom py-2">
+                          Relaxation massage
                         </li>
-                        <li className="d-flex justify-content-between py-2">
-                          <span>Hair Treatments</span>
-                          <span>30 min — $30</span>
-                        </li>
+                        <li className="border-bottom py-2">Hydrating cream</li>
+                        <li className="py-2">Polish included</li>
                       </ul>
+
+                      <div className="d-flex justify-content-end">
+                        <strong>Price: $45</strong>
+                      </div>
                     </div>
                   )}
                 </div>
 
-                {/* === Accordion 2 === */}
-                <div className="card border-0">
+                {/* ===== PREMIUM PEDICURE ===== */}
+                <div className="card border-0 mb-3">
                   <div className="card-header bg-light">
                     <button
                       className="d-flex align-items-center justify-content-between btn btn-link w-100 text-dark text-left"
-                      onClick={() => toggleAccordion("two")}
+                      onClick={() => toggleAccordion("premium")}
                     >
-                      Massage Therapies
+                      E'LAN PREMIUM PEDICURE
                       <i
                         className={`fa ${
-                          openAccordion === "two" ? "fa-minus" : "fa-plus"
+                          openAccordion === "premium" ? "fa-minus" : "fa-plus"
                         }`}
                         aria-hidden="true"
                       />
                     </button>
                   </div>
-                  {openAccordion === "two" && (
+
+                  {openAccordion === "premium" && (
                     <div className="card-body text-left">
+                      <p className="mb-2">
+                        <strong>Duration:</strong> 45–50 mins
+                      </p>
+
                       <ul className="list-unstyled">
-                        <li className="d-flex justify-content-between border-bottom py-2">
-                          <span>Face Treatments</span>
-                          <span>40 min — $10</span>
+                        <li className="border-bottom py-2">
+                          Pink sea salt soak
                         </li>
-                        <li className="d-flex justify-content-between border-bottom py-2">
-                          <span>Nail Treatments</span>
-                          <span>30 min — $20</span>
+                        <li className="border-bottom py-2">
+                          Fruit & flower soak
                         </li>
-                        <li className="d-flex justify-content-between border-bottom py-2">
-                          <span>Medical Treatments</span>
-                          <span>60 min — $10</span>
+                        <li className="border-bottom py-2">
+                          Exfoliating scrubs
                         </li>
-                        <li className="d-flex justify-content-between py-2">
-                          <span>Hair Treatments</span>
-                          <span>30 min — $30</span>
-                        </li>
+                        <li className="border-bottom py-2">Steam treatment</li>
+                        <li className="py-2">Relaxing foot massage</li>
                       </ul>
+
+                      <div className="d-flex justify-content-end">
+                        <strong>Price: $60</strong>
+                      </div>
                     </div>
                   )}
                 </div>

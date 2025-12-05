@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import BgImage from "./BgImage";
 const allPosts = [
   {
     id: 1,
-    image: "/image_1.jpg",
+    image: "/DOS04474.jpg",
     day: "25",
     month: "September",
     year: "2019",
@@ -16,7 +17,7 @@ const allPosts = [
   },
   {
     id: 2,
-    image: "/image_2.jpg",
+    image: "/DOS04476.jpg",
     day: "25",
     month: "September",
     year: "2019",
@@ -26,7 +27,7 @@ const allPosts = [
   },
   {
     id: 3,
-    image: "/image_3.jpg",
+    image: "/DOS04532.jpg",
     day: "25",
     month: "September",
     year: "2019",
@@ -46,7 +47,7 @@ const allPosts = [
   },
   {
     id: 5,
-    image: "/image_5.jpg",
+    image: "/DOS04544.jpg",
     day: "25",
     month: "September",
     year: "2019",
@@ -64,6 +65,116 @@ const allPosts = [
     description:
       "How holistic living and balance can bring clarity and fulfillment.",
   },
+  {
+  id: 7,
+  image: "/DOS04778.jpg",
+  day: "25",
+  month: "September",
+  year: "2019",
+  title: "Aroma Therapy Massage",
+  description: "Relaxing essential-oil massage that calms stress and rejuvenates the body.",
+},
+{
+  id: 8,
+  image: "/DOS04797.jpg",
+  day: "28",
+  month: "September",
+  year: "2019",
+  title: "Brightening Facial",
+  description: "Deep cleansing facial treatment designed to hydrate and brighten dull skin.",
+},
+{
+  id: 9,
+  image: "/DOS04579.jpg",
+  day: "02",
+  month: "October",
+  year: "2019",
+  title: "Hair Smoothening",
+  description: "Advanced smoothening treatment for silky, straight, and frizz-free hair.",
+},
+{
+  id: 10,
+  image: "https://images.unsplash.com/photo-1562322140-8baeececf3df",
+  day: "06",
+  month: "October",
+  year: "2019",
+  title: "Keratin Hair Spa",
+  description: "Repairs damaged hair and restores shine with deep keratin nourishment.",
+},
+{
+  id: 11,
+  image: "/DOS04806.jpg",
+  day: "12",
+  month: "October",
+  year: "2019",
+  title: "Deep Tissue Massage",
+  description: "Relieves muscle tension and stiffness for full-body relaxation.",
+},
+// {
+//   id: 12,
+//   image: "https://images.unsplash.com/photo-1599058917212-d750089bc07a",
+//   day: "15",
+//   month: "October",
+//   year: "2019",
+//   title: "Foot Reflexology",
+//   description: "Pressure-point foot therapy that improves circulation and reduces stress.",
+// },
+{
+  id: 13,
+  image: "/DOS04649.jpg",
+  day: "20",
+  month: "October",
+  year: "2019",
+  title: "Luxury Spa Therapy",
+  description: "A premium relaxation treatment designed to relieve stress, refresh the body, and enhance overall well-being.",
+},
+{
+  id: 14,
+  image: "/DOS04708.jpg",
+  day: "24",
+  month: "October",
+  year: "2019",
+  title: "Nail Shades & Gel Polish Collection",
+  description: "A complete range of colorful gel polishes and nail shades for premium manicures and nail art services.",
+}
+// {
+//   id: 15,
+//   image: "https://images.unsplash.com/photo-1599058917765-e7d3dfc0c8b1",
+//   day: "30",
+//   month: "October",
+//   year: "2019",
+//   title: "Hot Stone Therapy",
+//   description: "Warm stone therapy to melt away stress and release body tension.",
+// },
+// {
+//   id: 16,
+//   image: "https://images.unsplash.com/photo-1599058917212-d750089bc07a",
+//   day: "04",
+//   month: "November",
+//   year: "2019",
+//   title: "Full Body Waxing",
+//   description: "Smooth hair-free skin using premium, painless waxing techniques.",
+// },
+// {
+//   id: 17,
+//   image: "https://images.unsplash.com/photo-1600371231953-96d5437c9658",
+//   day: "10",
+//   month: "November",
+//   year: "2019",
+//   title: "Bridal Makeup Session",
+//   description: "Professional bridal makeover designed for flawless wedding looks.",
+// },
+// {
+//   id: 18,
+//   image: "https://images.unsplash.com/photo-1581089781785-603411fa81d5",
+//   day: "14",
+//   month: "November",
+//   year: "2019",
+//   title: "Nail Art & Extensions",
+//   description: "Trendy nail extensions and custom nail art for stylish hands.",
+// },
+
+
 ];
 
 const BlogSection = ({ showLayout = false }) => {
@@ -98,7 +209,7 @@ const BlogSection = ({ showLayout = false }) => {
     style={{
             position: "relative",
             height: "60vh",
-            backgroundImage: 'url("/bg_3.jpg")',
+           ...BgImage,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",

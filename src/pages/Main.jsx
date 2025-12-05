@@ -31,10 +31,19 @@ const Main = () => {
   }, []);
 
   const galleryImages = [
-    "/gallery-1.jpg",
-    "/gallery-2.jpg",
+    "/DOS04476.jpg",
+    "/DOS04480.jpg",
+    "/DOS04554.jpg",
+    "/exterior3.jpg",
+    "/exterior8.jpg",
+    "/DOS04579.jpg",
+    "/DOS04704.jpg",
+    "/DOS04805.jpg",
+    "/DOS04623.jpg",
+    "/DOS04825.jpg",
     "/gallery-3.jpg",
-    "/gallery-1.jpg",
+    "/DOS04629.jpg"
+
     // Add more images if needed
   ];
   const [isOpen, setIsOpen] = useState(false);
@@ -62,171 +71,169 @@ const Main = () => {
   return (
     <>
       {/* <Navbar/> */}
-     <section
-  className="hero-wrap d-flex align-items-center justify-content-center text-center"
-  style={{
-    position: "relative",
-    height: "100vh",
-    backgroundImage: 'url("/bg_1.jpg")',
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundAttachment: "fixed",
-    padding: "100px 0",
-    color: "#fff",
-  }}
->
-  {/* Dark Overlay */}
-  <div
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      // backgroundColor: "rgba(0,0,0,0.6)",
-      zIndex: 1,
-    }}
-  />
-
-  {/* Content */}
-  <div
-    className="container"
-    style={{
-      position: "relative",
-      zIndex: 2,
-      maxWidth: "1100px",
-      padding: "0 20px",
-    }}
-  >
-    {/* 🔥 Big Animated Heading */}
-    <motion.h1
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      style={{
-        fontFamily: "'Playfair Display', serif",
-        fontWeight: 900,
-        fontSize: "80px",
-        letterSpacing: "10px",
-        textTransform: "uppercase",
-        textAlign: "center",
-        lineHeight: "1.1",
-        width: "100%",
-        marginBottom: "40px",
-        background:
-          "linear-gradient(90deg, #ff00cc, #ff8800, #ffee00, #00c9ff)",
-        WebkitBackgroundClip: "text",
-        WebkitTextFillColor: "transparent",
-        transform: "scale(1.25)",
-        transformOrigin: "center",
-        textShadow: "6px 6px 15px rgba(0,0,0,0.4)",
-      }}
-    >
-      Elan Beauty & Spa
-    </motion.h1>
-
-    {/* ✨ New Small Text + Buttons Section */}
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.3 }}
-      style={{
-        maxWidth: "700px",
-        margin: "0 auto",
-        textAlign: "center",
-      }}
-    >
-      <div
+      <section
+        className="hero-wrap d-flex align-items-center justify-content-center text-center"
         style={{
-          width: "120px",
-          height: "2px",
-          backgroundColor: "#f4c542",
-          margin: "0 auto 20px auto",
-        }}
-      />
-
-      <p
-        style={{
-          fontSize: "18px",
-          color: "#000000ff",
-          opacity: 0.9,
-          lineHeight: "1.6",
-          marginBottom: "35px",
+          position: "relative",
+          height: "100vh",
+          backgroundImage: 'url("/DOS04503.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          padding: "100px 0",
+          color: "#fff",
         }}
       >
-        Far far away, behind the word mountains, far from the countries
-        Vokalia and Consonantia, there live the blind texts.
-      </p>
+        {/* Dark Overlay */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            // backgroundColor: "rgba(0,0,0,0.6)",
+            zIndex: 1,
+          }}
+        />
 
-      {/* BUTTONS */}
-     <div
-  style={{
-    display: "flex",
-    gap: "20px",
-    justifyContent: "center",
-    flexWrap: "wrap",
-  }}
->
-  {/* Get in Touch */}
-  <button
-    style={{
-      backgroundColor: "#ff4fa3",
-      border: "none",
-      padding: "12px 35px",
-      borderRadius: "30px",
-      fontSize: "18px",
-      color: "#fff",
-      cursor: "pointer",
-      transition: "all 0.3s ease",
-    }}
-    onMouseEnter={(e) => {
-      e.target.style.transform = "scale(1.1)";
-      e.target.style.backgroundColor = "#ff1e90"; // darker pink on hover
-      e.target.style.boxShadow = "0 0 20px rgba(255,79,163,0.9)";
-    }}
-    onMouseLeave={(e) => {
-      e.target.style.transform = "scale(1)";
-      e.target.style.backgroundColor = "#ff4fa3";
-      e.target.style.boxShadow = "none";
-    }}
-  >
-    Get in Touch
-  </button>
+        {/* Content */}
+        <div
+          className="container"
+          style={{
+            position: "relative",
+            zIndex: 2,
+            maxWidth: "1100px",
+            padding: "0 20px",
+          }}
+        >
+          {/* 🔥 Big Animated Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: 900,
+              fontSize: "80px",
+              letterSpacing: "10px",
+              textTransform: "uppercase",
+              textAlign: "center",
+              lineHeight: "1.1",
+              width: "100%",
+              marginBottom: "40px",
+              background:
+                "linear-gradient(90deg, #ff00cc, #ff8800, #ffee00, #00c9ff)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              transform: "scale(1.25)",
+              transformOrigin: "center",
+              textShadow: "6px 6px 15px rgba(0,0,0,0.4)",
+            }}
+          >
+            Elan Beauty & Spa
+          </motion.h1>
 
-  {/* Contact Button */}
-  <button
-    style={{
-      backgroundColor: "transparent",
-      border: "2px solid #fff",
-      padding: "12px 35px",
-      borderRadius: "30px",
-      fontSize: "18px",
-      color: "#fff",
-      cursor: "pointer",
-      transition: "all 0.3s ease",
-    }}
-    onMouseEnter={(e) => {
-      e.target.style.transform = "scale(1.1)";
-      e.target.style.backgroundColor = "#ff4fa3"; // pink fill on hover
-      e.target.style.color = "#fff";
-      e.target.style.border = "2px solid #ff4fa3";
-      e.target.style.boxShadow = "0 0 20px rgba(255,79,163,0.8)";
-    }}
-    onMouseLeave={(e) => {
-      e.target.style.transform = "scale(1)";
-      e.target.style.backgroundColor = "transparent";
-      e.target.style.color = "#fff";
-      e.target.style.border = "2px solid #fff";
-      e.target.style.boxShadow = "none";
-    }}
-  >
-    Contact
-  </button>
-</div>
-    </motion.div>
-  </div>
-</section>
+          {/* ✨ New Small Text + Buttons Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            style={{
+              maxWidth: "700px",
+              margin: "0 auto",
+              textAlign: "center",
+            }}
+          >
+            <div
+              style={{
+                width: "120px",
+                height: "2px",
+                backgroundColor: "#f4c542",
+                margin: "0 auto 20px auto",
+              }}
+            />
 
+            <p
+              style={{
+                fontSize: "18px",
+                color: "#000000ff",
+                opacity: 0.9,
+                lineHeight: "1.6",
+                marginBottom: "35px",
+              }}
+            >
+            
+            </p>
+
+            {/* BUTTONS */}
+            <div
+              style={{
+                display: "flex",
+                gap: "20px",
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              {/* Get in Touch */}
+              <button
+                style={{
+                  backgroundColor: "#ff4fa3",
+                  border: "none",
+                  padding: "12px 35px",
+                  borderRadius: "30px",
+                  fontSize: "18px",
+                  color: "#fff",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.transform = "scale(1.1)";
+                  e.target.style.backgroundColor = "#ff1e90"; // darker pink on hover
+                  e.target.style.boxShadow = "0 0 20px rgba(255,79,163,0.9)";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.transform = "scale(1)";
+                  e.target.style.backgroundColor = "#ff4fa3";
+                  e.target.style.boxShadow = "none";
+                }}
+              >
+                Get in Touch
+              </button>
+
+              {/* Contact Button */}
+              <button
+                style={{
+                  backgroundColor: "transparent",
+                  border: "2px solid #fff",
+                  padding: "12px 35px",
+                  borderRadius: "30px",
+                  fontSize: "18px",
+                  color: "#fff",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.transform = "scale(1.1)";
+                  e.target.style.backgroundColor = "#ff4fa3"; // pink fill on hover
+                  e.target.style.color = "#fff";
+                  e.target.style.border = "2px solid #ff4fa3";
+                  e.target.style.boxShadow = "0 0 20px rgba(255,79,163,0.8)";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.transform = "scale(1)";
+                  e.target.style.backgroundColor = "transparent";
+                  e.target.style.color = "#fff";
+                  e.target.style.border = "2px solid #fff";
+                  e.target.style.boxShadow = "none";
+                }}
+              >
+                Contact
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       <section
         style={{
@@ -359,7 +366,7 @@ const Main = () => {
               <div className="offer-deal text-center px-2 px-lg-5">
                 <div
                   className="img"
-                  style={{ backgroundImage: "url(/offer-deal-1.jpg)" }}
+                  style={{ backgroundImage: "url(/DOS04690.jpg)" }}
                 />
                 <div className="text mt-4">
                   <h3 className="mb-4">Book Your Treatment</h3>
@@ -382,7 +389,7 @@ const Main = () => {
               <div className="offer-deal active text-center px-2 px-lg-5">
                 <div
                   className="img"
-                  style={{ backgroundImage: "url(/offer-deal-2.jpg)" }}
+                  style={{ backgroundImage: "url(/DOS04474.jpg)" }}
                 />
                 <div className="text mt-4">
                   <h3 className="mb-4">Great Gift Packages</h3>
@@ -405,7 +412,7 @@ const Main = () => {
               <div className="offer-deal text-center px-2 px-lg-5">
                 <div
                   className="img"
-                  style={{ backgroundImage: "url(/offer-deal-3.jpg)" }}
+                  style={{ backgroundImage: "url(/DOS04545.jpg)" }}
                 />
                 <div className="text mt-4">
                   <h3 className="mb-4">Special Offer &amp; Deal</h3>

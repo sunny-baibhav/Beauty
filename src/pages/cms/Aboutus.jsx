@@ -2,12 +2,12 @@ import React from "react";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import { Link } from "react-router-dom";
+import BgImage from "../BgImage";
 
 const Aboutus = () => {
   return (
     <>
-    
-       
+
       <Navbar />
       <div className="main-content" style={{ margin: 0, padding: 0 }}>
         <section
@@ -15,7 +15,7 @@ const Aboutus = () => {
           style={{
             position: "relative",
             height: "60vh",
-                backgroundImage: 'url("/bg_3.jpg")',
+            ...BgImage,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",

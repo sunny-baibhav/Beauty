@@ -89,13 +89,8 @@ const Landingview = () => {
         {/* HEADING */}
         <h1
           className="hero-title"
-          style={{
-            display: "flex",
-            gap: "12px",
-            flexWrap: "wrap",
-            alignContent: "center",
-            flexDirection: "column",
-          }}
+          style={{ display: "flex", gap: "12px", flexWrap: "wrap",  alignContent: "center",
+  flexDirection: "column", }}
         >
           We Have
           <span className="highlight-anim">
@@ -119,7 +114,7 @@ const Landingview = () => {
           {/* IMAGE CARD 1 */}
           <div className="img-card" onClick={handlechange}>
             <img
-              src="/edinburgh-scotland-january-17-2020-600nw-2096134474.webp"
+              src="/exterior3.jpg"
               alt="Store 1"
               style={{
                 width: "100%",
@@ -134,7 +129,7 @@ const Landingview = () => {
           {/* IMAGE CARD 2 */}
           <div className="img-card" onClick={handlechange1}>
             <img
-              src="/istockphoto-1856117770-612x612.jpg"
+              src="/DOS04825.jpg"
               alt="Store 2"
               style={{
                 width: "100%",

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import BgImage from "./BgImage";
 
 const CounterSection = () => {
   const [startCount, setStartCount] = useState(false);
@@ -60,7 +61,7 @@ const CounterSection = () => {
       id="section-counter"
       style={{
         position: "relative",
-        backgroundImage: "url('/bg_3.jpg')",
+        ...BgImage,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
