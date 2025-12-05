@@ -41,7 +41,6 @@ const Main = () => {
     "/DOS04805.jpg",
     "/DOS04623.jpg",
     "/DOS04825.jpg",
-    "/gallery-3.jpg",
     "/DOS04629.jpg"
 
     // Add more images if needed
