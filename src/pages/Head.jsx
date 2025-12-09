@@ -12,6 +12,7 @@ import SneakPeak from "./SneakPeak";
 import Footer from "./Footer";
 import SpaImageCard from "./SpaImageCard";
 const Head = () => {
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
   return (
     <>
       <Navbar />
@@ -25,7 +26,8 @@ const Head = () => {
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
           padding: "100px 0",
-          color: "#fff", // stack items vertically
+          color: "#fff", 
+          transform: "none",// stack items vertically
         }}
       >
         {/* Background Image Overlay */}
@@ -256,7 +258,7 @@ const Head = () => {
               fontSize: "48px",
               fontWeight: "900",
               marginBottom: "25px",
-              color: "#d4af37", // GOLD COLOR
+              color: "#d4af37",
               textTransform: "uppercase",
               letterSpacing: "2px",
             }}
@@ -276,10 +278,7 @@ const Head = () => {
           >
             Our signature head spa service is unlike anything you'll find in
             Australia. Unlike traditional hair washing, our treatments focus on
-            deep scalp cleansing, stress relief, and hair nourishment. Using
-            advanced techniques and natural, high-quality products, we aim to
-            enhance your scalp's health while promoting hair growth and shine.
-            Perfect for those looking to unwind or address scalp concerns.
+            deep scalp cleansing, stress relief, and hair nourishment.
           </p>
         </div>
       </section>
@@ -291,79 +290,79 @@ const Head = () => {
           boxSizing: "border-box",
         }}
       >
-        <div
-          style={{
-            width: "100%",
-            maxWidth: "1200px",
-            margin: "0 auto",
-            display: "flex",
-            justifyContent: "center",
-            gap: "20px",
-          }}
-        >
-          {/* IMAGE 1 */}
+        {/* MOBILE (SWIPER) */}
+        {isMobile ? (
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            pagination={{ clickable: true }}
+            modules={[Pagination]}
+            style={{ width: "100%", maxWidth: "500px" }}
+          >
+            {["/DOS04799.jpg", "/DOS04529.jpg", "/DOS04529.jpg"].map(
+              (img, i) => (
+                <SwiperSlide key={i}>
+                  <div
+                    style={{
+                      width: "100%",
+                      height: "350px",
+                      borderRadius: "16px",
+                      overflow: "hidden",
+                      background: "#111",
+                    }}
+                  >
+                    <img
+                      src={img}
+                      alt={`Slide ${i + 1}`}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </div>
+                </SwiperSlide>
+              )
+            )}
+          </Swiper>
+        ) : (
+          // DESKTOP (3 IMAGES SIDE-BY-SIDE)
           <div
             style={{
-              width: "32%",
-              height: "380px",
-              borderRadius: "16px",
-              overflow: "hidden",
-              background: "#111",
+              width: "100%",
+              maxWidth: "1200px",
+              margin: "0 auto",
+              display: "flex",
+              justifyContent: "center",
+              gap: "20px",
             }}
           >
-            <img
-              src="/DOS04799.jpg"
-              alt="Spa Image 1"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
+            {["/DOS04799.jpg", "/DOS04529.jpg", "/DOS04529.jpg"].map(
+              (img, i) => (
+                <div
+                  key={i}
+                  style={{
+                    width: "32%",
+                    height: "380px",
+                    borderRadius: "16px",
+                    overflow: "hidden",
+                    background: "#111",
+                  }}
+                >
+                  <img
+                    src={img}
+                    alt={`Spa ${i + 1}`}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+              )
+            )}
           </div>
-
-          {/* IMAGE 2 */}
-          <div
-            style={{
-              width: "32%",
-              height: "380px",
-              borderRadius: "16px",
-              overflow: "hidden",
-              background: "#111",
-            }}
-          >
-            <img
-              src="/DOS04529.jpg"
-              alt="Spa Image 2"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-
-          {/* IMAGE 3 */}
-          <div
-            style={{
-              width: "32%",
-              height: "380px",
-              borderRadius: "16px",
-              overflow: "hidden",
-              background: "#111",
-            }}
-          >
-            <img
-              src="/DOS04529.jpg"
-              alt="Spa Image 3"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-        </div>
+        )}
       </section>
       <section
         style={{
@@ -447,6 +446,7 @@ const Head = () => {
           </div>
         </div>
       </section>
+
       {/* {third heading } */}
       <section
         style={{
@@ -623,11 +623,13 @@ const Head = () => {
           </div>
         </div>
       </section>
+
+      {/* cirlce image  */}
       <section
         style={{
           width: "100%",
           background: "#000",
-          padding: "120px 20px",
+          padding: "80px 20px",
           boxSizing: "border-box",
         }}
       >
@@ -637,54 +639,57 @@ const Head = () => {
             maxWidth: "1450px",
             margin: "0 auto",
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "center",
             alignItems: "center",
-            gap: "70px",
+            gap: "60px",
             flexWrap: "wrap",
+
+            /* MOBILE FIX */
+            textAlign: window.innerWidth < 768 ? "center" : "left",
           }}
         >
-          {/* ===== LEFT CIRCLE IMAGE / VIDEO ===== */}
+          {/* LEFT CIRCLE IMAGE */}
           <div
             style={{
               flex: 1,
-              minWidth: "350px",
-              height: "500px",
-              maxWidth: "550px",
-              borderRadius: "100%", // <-- CIRCLE SHAPE
+              minWidth: "280px",
+              width: window.innerWidth < 768 ? "280px" : "450px",
+              height: window.innerWidth < 768 ? "280px" : "450px",
+              borderRadius: "100%",
               overflow: "hidden",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              marginLeft: "60px",
+              margin: "0 auto",
             }}
           >
             <img
-              src="/DOS04799.jpg" // <-- replace with your circular video image
+              src="/DOS04799.jpg"
               alt="Relaxing Head Spa"
               style={{
-                width: "105%",
+                width: "110%",
                 height: "100%",
                 objectFit: "cover",
               }}
             />
           </div>
 
-          {/* ===== RIGHT CONTENT ===== */}
+          {/* RIGHT CONTENT */}
           <div
             style={{
               flex: 1.2,
-              minWidth: "380px",
+              minWidth: "300px",
               color: "#fff",
+              padding: window.innerWidth < 768 ? "0 10px" : "0",
             }}
           >
             <h1
               style={{
-                fontSize: "64px",
-                lineHeight: "1.1",
+                fontSize: window.innerWidth < 768 ? "32px" : "64px",
+                lineHeight: "1.2",
                 fontWeight: "800",
                 color: "#D4AF37",
                 marginBottom: "20px",
-                marginRight: "60px",
               }}
             >
               Relax, Rejuvenate, and
@@ -694,34 +699,37 @@ const Head = () => {
 
             <p
               style={{
-                fontSize: "22px",
-                lineHeight: "36px",
+                fontSize: window.innerWidth < 768 ? "16px" : "22px",
+                lineHeight: window.innerWidth < 768 ? "26px" : "36px",
                 color: "#ccc",
                 maxWidth: "600px",
-                marginBottom: "40px",
-                marginRight: "60px",
+                margin: "0 auto 40px auto",
               }}
             >
               Let go of stress and sink into pure relaxation with our calming
-              head spa experience. Our expert techniques will soothe your mind
-              and body, offering you a mini-escape from the hustle and bustle.
-              Leave feeling lighter, relaxed, and ready to take on the world.
+              head spa experience. Our expert techniques soothe your mind and
+              body, offering a mini-escape from the hustle and bustle. Leave
+              feeling lighter, relaxed, and ready to take on the world.
             </p>
 
-            <button
-              style={{
-                padding: "16px 40px",
-                background: "#C6A04F",
-                border: "none",
-                borderRadius: "6px",
-                fontSize: "18px",
-                fontWeight: "600",
-                color: "#000",
-                cursor: "pointer",
-              }}
+            <div
+              style={{ textAlign: window.innerWidth < 768 ? "center" : "left" }}
             >
-              Book Now
-            </button>
+              <button
+                style={{
+                  padding: "14px 34px",
+                  background: "#C6A04F",
+                  border: "none",
+                  borderRadius: "6px",
+                  fontSize: "18px",
+                  fontWeight: "600",
+                  color: "#000",
+                  cursor: "pointer",
+                }}
+              >
+                Book Now
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -915,54 +923,58 @@ const Head = () => {
             maxWidth: "1450px",
             margin: "0 auto",
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent:
+              window.innerWidth < 768 ? "center" : "space-between",
             alignItems: "center",
-            gap: "70px",
+            gap: "60px",
             flexWrap: "wrap",
+            textAlign: window.innerWidth < 768 ? "center" : "left",
           }}
         >
-          {/* ===== LEFT CIRCLE IMAGE / VIDEO ===== */}
+          {/* LEFT CIRCLE IMAGE */}
           <div
             style={{
               flex: 1,
-              minWidth: "350px",
-              height: "500px",
-              maxWidth: "550px",
-              borderRadius: "100%", // <-- CIRCLE SHAPE
+              minWidth: window.innerWidth < 768 ? "260px" : "350px",
+              height: window.innerWidth < 768 ? "260px" : "500px",
+              maxWidth: window.innerWidth < 768 ? "260px" : "550px",
+              borderRadius: "100%",
               overflow: "hidden",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              marginLeft: "60px",
+              marginLeft: window.innerWidth < 768 ? "0" : "60px",
+              margin: window.innerWidth < 768 ? "0 auto" : "0",
             }}
           >
             <img
-              src="/DOS04799.jpg" // <-- replace with your circular video image
+              src="/DOS04799.jpg"
               alt="Relaxing Head Spa"
               style={{
-                width: "105%",
+                width: "110%",
                 height: "100%",
                 objectFit: "cover",
               }}
             />
           </div>
 
-          {/* ===== RIGHT CONTENT ===== */}
+          {/* RIGHT CONTENT */}
           <div
             style={{
               flex: 1.2,
-              minWidth: "380px",
+              minWidth: "300px",
               color: "#fff",
+              padding: window.innerWidth < 768 ? "0 10px" : "0",
             }}
           >
             <h1
               style={{
-                fontSize: "64px",
-                lineHeight: "1.1",
+                fontSize: window.innerWidth < 768 ? "32px" : "64px",
+                lineHeight: "1.2",
                 fontWeight: "800",
                 color: "#D4AF37",
                 marginBottom: "20px",
-                marginRight: "60px",
+                marginRight: window.innerWidth < 768 ? "0" : "60px",
               }}
             >
               Nourish, Hydrate, Shine
@@ -970,34 +982,39 @@ const Head = () => {
 
             <p
               style={{
-                fontSize: "22px",
-                lineHeight: "36px",
+                fontSize: window.innerWidth < 768 ? "16px" : "22px",
+                lineHeight: window.innerWidth < 768 ? "26px" : "36px",
                 color: "#ccc",
                 maxWidth: "600px",
-                marginBottom: "40px",
+                margin:
+                  window.innerWidth < 768 ? "0 auto 40px auto" : "0 0 40px 0",
               }}
             >
               Transform your hair with our luxurious treatments. Infused with
               rich nutrients, our head spa service brings your hair back to
               life—restoring moisture, repairing damage, and boosting shine.
               Walk out with hair that looks and feels stronger, healthier, and
-              gorgeously radiant
+              gorgeously radiant.
             </p>
 
-            <button
-              style={{
-                padding: "16px 40px",
-                background: "#C6A04F",
-                border: "none",
-                borderRadius: "6px",
-                fontSize: "18px",
-                fontWeight: "600",
-                color: "#000",
-                cursor: "pointer",
-              }}
+            <div
+              style={{ textAlign: window.innerWidth < 768 ? "center" : "left" }}
             >
-              Book Now
-            </button>
+              <button
+                style={{
+                  padding: "16px 40px",
+                  background: "#C6A04F",
+                  border: "none",
+                  borderRadius: "6px",
+                  fontSize: "18px",
+                  fontWeight: "600",
+                  color: "#000",
+                  cursor: "pointer",
+                }}
+              >
+                Book Now
+              </button>
+            </div>
           </div>
         </div>
       </section>
